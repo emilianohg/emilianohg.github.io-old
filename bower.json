@@ -1,0 +1,26 @@
+{
+  "name": "emilianohg.github.io",
+  "homepage": "https://github.com/emilianohg/emilianohg.github.io",
+  "authors": [
+    "emilianohg <emiliano4144@hotmail.com>"
+  ],
+  "description": "Blog de programación en Español",
+  "main": "index.html",
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "font-awesome": "fontawesome#^4.6.3",
+    "crossfade.js": "^0.1.0"
+  }
+}

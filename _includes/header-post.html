@@ -1,0 +1,12 @@
+<header class="intro-header post-header crossfade" style="background-image: url(/images/posts/{{ page.background_image }})">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+                    <span class="meta post-meta"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author }}</span></span> • <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

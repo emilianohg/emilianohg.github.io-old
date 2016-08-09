@@ -7,13 +7,15 @@
 
 # Site settings
 title: emilianohg
-email: EmilianoHG2099@outlook.com
+author: Emiliano Hernández Guerrero
+email: emilianohg2099@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog de programacion
+  Blog de programación en español
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://emilianohg.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
 github_username:  emilianohg
+permalink:        /blog/:year/:month/:day/:title.html
+
 
 # Build settings
 markdown: kramdown

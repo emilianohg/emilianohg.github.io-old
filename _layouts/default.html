@@ -1,19 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
   {% include head.html %}
 
   <body>
-
+    {% include nav.html %}
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              {{ content }}
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <nav aria-label="Page navigation">
+                <ul class="pager">
+                    {% if paginator.previous_page %}
+                        <li class="previous"><a href="{{ paginator.previous_page_path }}" class="previous">Anterior</a></li>
+                    {% else %}
+                       <li class="previous"><a href="#!"><i class="glyphicon glyphicon-chevron-left"></i> Anterior</a></li>
+                    {% endif %}
+                    {% if paginator.next_page %}
+                        <li class="next"><a href="{{ paginator.next_page_path }}" class="next">Siguiente <i class="glyphicon glyphicon-chevron-right"></i></a><li>
+                    {% else %}
+                       <li class="next"><a href="#!">Siguiente <i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
     </div>
 
+
     {% include footer.html %}
+
+    <!-- jQuery -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Particles -->
+    <script src="/js/jquery.particleground.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="/js/clean-blog.js"></script>
 
   </body>
 

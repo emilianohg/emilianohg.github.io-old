@@ -1,15 +1,44 @@
----
-layout: default
----
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="es">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+  {% include head-post.html %}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  <body>
+    {% include nav.html %}
+    {% include header-post.html %}
 
-</article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+					<div class="post-content" itemprop="articleBody">
+						{{ content }}
+					</div>
+                    <div>
+                        <ul class="tags">
+                            {% for tag in page.tags %}
+                                <li><a href="#" class="tag">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+				</article>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {% include footer.html %}
+
+    <!-- jQuery -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="/js/clean-blog.js"></script>
+
+  </body>
+
+</html>
