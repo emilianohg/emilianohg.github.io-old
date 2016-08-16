@@ -21,3 +21,19 @@ layout: default
       </div>
     {% endfor %}
 </div>
+<div class="row">
+    <nav aria-label="Page navigation">
+        <ul class="pager">
+            {% if paginator.previous_page %}
+                <li class="previous"><a href="{{ paginator.previous_page_path }}" class="previous">Anterior</a></li>
+            {% else %}
+               <li class="previous"><a href="#!"><i class="glyphicon glyphicon-chevron-left"></i> Anterior</a></li>
+            {% endif %}
+            {% if paginator.next_page %}
+                <li class="next"><a href="{{ paginator.next_page_path }}" class="next">Siguiente <i class="glyphicon glyphicon-chevron-right"></i></a><li>
+            {% else %}
+               <li class="next"><a href="#!">Siguiente <i class="glyphicon glyphicon-chevron-right"></i></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
