@@ -10,9 +10,8 @@ background_image: post-bg.jpg
 Este es un pequeño ejemplo de como funciona Jekyll y que tal se ve en el index.
 
 {% highlight js %}
-/*
-* Comentario multilinea
-*/
-var x = Math.random();
-console.log(x);
+var objeto = function () {
+  return 'Hola';
+}
+console.log(objeto());
 {% endhighlight %}

@@ -1,3 +1,4 @@
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -19,3 +20,5 @@ permalink:        /blog/:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
